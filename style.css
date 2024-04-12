@@ -1,0 +1,474 @@
+*{
+    box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+}
+
+html{
+    scroll-behavior: smooth; /* Agrega un desplazamiento suave al desplazarse por la página */
+}
+
+body{
+    margin: 0;  /* Elimina el margen predeterminado del cuerpo */
+    padding: 0;
+    font-family: 'Raleway', sans-serif; /* Define la familia de fuentes */
+}
+
+/* Estilos para encabezados y párrafos */
+h1{ font-size: 56px;} /* Establece el tamaño de fuente para los encabezados h1 */
+h2{ font-size: 48px;} /* Establece el tamaño de fuente para los encabezados h2 */
+h3{ font-size: 40px;} /* Establece el tamaño de fuente para los encabezados h3 */
+p{ font-size: 20px;} /* Establece el tamaño de fuente para los párrafos */
+
+button{
+    font-size: 1.25em; /* Establece el tamaño de fuente para los botones */
+    font-weight: bold; /* Establece el grosor de la fuente para los botones */
+    padding: 10px 30px; /* Establece el relleno de los botones */
+    border-radius: 5px; /* Establece el radio de borde para los botones */
+    border: 2px solid rgba(0,0,0,0.3); /* Establece el borde de los botones */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Agrega una sombra a los botones */
+    color: white; /* Establece el color del texto de los botones */
+    background-color: #111; /* Establece el color de fondo de los botones */
+    cursor: pointer; /* Cambia el cursor al pasar por encima de los botones */
+}
+
+/* Cambio de color al pasar el ratón por encima de cualquier botón */
+button:hover{
+    background-color: #67e0a3; /* Un verde más intenso al pasar el ratón */
+}
+
+/* Estilos específicos para los botones de registro e inicio de sesión en la sección principal */
+.button-register,
+.button-login {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el botón de registro */
+.button-register {
+    background-color: #67e0a3; /* Verde más oscuro */
+    color: white; /* Texto blanco */
+}
+
+/* Estilo para el botón de inicio de sesión */
+.button-login {
+    background-color: #67e0a3; /* Verde más oscuro */
+    color: white; /* Texto blanco */
+}
+
+/* Cambio de color al pasar el ratón por encima de los botones */
+.button-register:hover,
+.button-login:hover {
+    background-color: #67e0a3; /* Verde más oscuro al hacer hover */
+}
+
+
+/* Estilos para el nuevo contenedor de ubicación */
+.location-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Estilos para el nuevo botón de ubicación */
+.button-location {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: #111;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el ratón por encima del nuevo botón */
+.button-location:hover {
+    background-color: #67e0a3;
+}
+
+
+/* Estilos para el texto blanco */
+.white-text {
+    color: white;
+}
+
+/* Estilos para el texto verde */
+.green-text {
+    color: #67e0a3;
+}
+
+#principal h3 {
+    font-weight: normal; /* Elimina la negrita para el texto específico */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    position: fixed; /* Establece la barra de navegación como fija */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    top: 0; /* Asegura que esté en la parte superior */
+    z-index: 5; /* Asegura que esté por encima de otros elementos */
+    animation: progress-grow linear both; /* Animación para el encabezado */
+    animation-timeline: scroll(root); /* Línea de tiempo de la animación del encabezado */
+    animation-range: 500px 1000px; /* Rango de la animación del encabezado */
+}
+
+/* Animación para el encabezado */
+@keyframes progress-grow {
+    from {
+        background-color: rgba(0,0,0,0.5); /* Color de fondo inicial para la animación del encabezado */
+    }
+    to {
+        background-color: black; /* Color de fondo final para la animación del encabezado */
+    }
+}
+
+/* Estilos para el contenido del encabezado */
+header .container {
+    display: flex; /* Usa un modelo de caja flexible para los elementos hijos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos hijos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Estilos para los enlaces dentro de la navegación en el encabezado */
+header a {
+    padding: 5px 12px; /* Relleno para los enlaces de navegación */
+    text-decoration: none; /* Quita la decoración de los enlaces */
+    font-weight: bold; /* Grosor de la fuente para los enlaces */
+    color: white; /* Color del texto de los enlaces */
+    transition-duration: 400ms; /* Duración de la transición de los enlaces */
+    transition-timing-function: ease; /* Función de temporización de la transición de los enlaces */
+}
+
+/* Estilos al pasar el ratón por encima de los enlaces de navegación */
+header a:hover {
+    color: #67e0a3; /* Cambia el color del texto al pasar el ratón por encima */
+    font-size: 1.2em; /* Cambia el tamaño de la fuente al pasar el ratón por encima */
+}
+
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    color: white; /* Color del texto */
+    margin-left: 20px; /* Espacio entre elementos */
+}
+
+/* Estilos para la sección principal */
+#principal {
+    display: flex; /* Configura la visualización flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    text-align: center; /* Alinea el texto al centro */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    height: 100vh; /* Establece la altura al 100% del viewport */
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://store.haworth.com/cdn/shop/articles/202311-Haworth-Store-Blog-20-Ergonomic-Desk-Height-Hero.jpg?v=1700689810"); /* Establece la imagen de fondo con un degradado */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Escala la imagen para cubrir el contenedor */
+    background-position: center center; /* Posiciona la imagen de fondo en el centro */
+}
+
+#principal h1, #principal h3 {
+    margin-top: -40px; /* Mover el texto hacia arriba */
+}
+
+/* Estilos para la sección de oferta de valor */
+#ofert {
+    padding: 80px 0;
+    text-align: center;
+    opacity: 0; /* Comienza con opacidad 0 para la transición */
+    transition: opacity 1s ease-in-out; /* Añade transición de opacidad */
+    pointer-events: none; /* Evita eventos de puntero en esta sección */
+    scroll-margin-top: 100vh; /* Define el punto donde la animación debe activarse */
+    scroll-padding-top: 100vh; /* Añade un espacio de desplazamiento al principio de la página */
+    animation-name: fade-in-scroll; /* Animación inicial al cargar la página */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s; /* Retraso para asegurar que la animación ocurra después del inicio */
+}
+
+/* Activar eventos de puntero para todos los elementos hijos de #ofert */
+#ofert * {
+    pointer-events: auto;
+}
+
+/* Estilos para el contenedor principal */
+#ofert .container {
+    display: flex; /* Configura la visualización flexbox */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 150px 25px; /* Relleno (arriba y abajo 200px, izquierda y derecha 12px) */
+    display: flex; /* ¡Se repite! Debes eliminar uno de estos */
+    justify-content: space-evenly; /* Distribuye el espacio entre elementos de manera uniforme */
+}
+
+/* Estilos para el contenedor de imagen */
+#ofert .img-container {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    /* https://eu-central-1.linodeobjects.com/tecnohotelnews/2022/12/shutterstock_572018158-1.jpg */
+    /* background-image: url("https://media.traveler.es/photos/625afba5027033bdc5da0ef3/master/w_1600%2Cc_limit/Four-Seasons-Resort-Bali-jimbaran-bay.jpg"); */
+    /* background-image: url("https://eu-central-1.linodeobjects.com/tecnohotelnews/2022/12/shutterstock_572018158-1.jpg"); */
+    /* segunda imagen */
+    background-image: url("https://cancun.uo.edu.mx/sites/default/files/gdi-blog/EMPRENDER%20FISIOTERAPIA.JPG");
+    border-radius: 10px; /* Borde redondeado para la imagen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    background-position: left center; /* Posición de la imagen en el contenedor */
+    height: 300px; /* Altura fija del contenedor */
+}
+
+/* Estilos para el contenedor de texto */
+#ofert .texto {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 0 20px; /* Relleno (arriba y abajo 0, izquierda y derecha 20px) */
+}
+
+/* Animación para la sección de oferta de valor */
+@keyframes fade-in-scroll {
+    from {
+        opacity: 0; /* Inicia con opacidad 0 */
+        transform: translateY(50px); /* Comienza 50px más abajo */
+    }
+    to {
+        opacity: 1; /* Termina con opacidad 1 */
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* Aplicar animación solo cuando se use la barra de desplazamiento y se pase por la sección */
+@media (hover: hover) {
+    #ofert:hover,
+    #ofert:focus-within {
+        opacity: 1; /* Cambia la opacidad a 1 al hacer hover o enfocar */
+        animation: none; /* Desactiva la animación de fade-in */
+    }
+}
+
+ /* Estilos para la sección de Características */
+
+ #characteristics {
+    padding: 80px 0;
+    background-color: #eaeaea; /* Fondo gris claro */
+    color: #000; /* Color del texto para contraste */
+
+  }
+  
+  #characteristics .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  #characteristics h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+  }
+  
+  .characteristics-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    flex-basis: calc(33.33% - 20px);
+    background-color: #c7e0d8; /* Fondo verde agua para las cartas */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .card button.info {
+    margin-left: auto; /* Empuja el botón hacia la parte derecha del contenedor */
+    margin-right: auto; /* Empuja el botón hacia la parte izquierda del contenedor */
+    display: block; /* Hace que el botón ocupe todo el ancho disponible */
+}
+
+  .card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .card:nth-child(1) h3 {
+    background-image: url('https://fintech.aarpfoundation.org/wp-content/uploads/2019/12/iStock-1011417332.jpg');
+    background-size: 120%; /* Hace que el fondo sea un poco más grande */
+    background-position: center; /* Centra la imagen */
+    color: #111; /* Cambia el color del texto del título a un tono de gris oscuro */
+    text-align: center; /* Centra el texto */
+    padding: 20px 0; /* Ajusta el espaciado para centrar verticalmente */
+}
+
+.card:nth-child(2) h3 {
+    background-image: url('https://media.licdn.com/dms/image/D4D12AQGdzlEKCtl97w/article-cover_image-shrink_600_2000/0/1690723531611?e=2147483647&v=beta&t=6OUKkC3o_gwOMNoitzN_uOWU8JLPnabx3zK0yLoNyKg');
+    background-size: 120%;
+    background-position: center;
+    color: #111; /* Cambia el color del texto del título a un tono de gris oscuro */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.card:nth-child(3) h3 {
+    background-image: url('https://www.hikvision.com/content/hikvision/es/newsroom/blog/presentaciones-digitales-eficiencia-y-colaboracion-en-la-empresa/_jcr_content/root/responsivegrid/image.coreimg.100.1280.jpeg/1629124305627/digital-presentation---banner-image.jpeg');
+    background-size: 120%;
+    background-position: center;
+    color: #111; /* Cambia el color del texto del título a un tono de gris oscuro */
+    text-align: center;
+    padding: 20px 0;
+} 
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #9acba8; /* Cambia el color al hacer hover */
+}
+
+/* Estilos para la sección Funcionalidades */
+
+#functionalities {
+    background-color: #d6e4f0; /* Cambia el color de fondo a un tono de azul claro */
+    padding: 180px 0; /* Ajusta el espacio interno según prefieras */
+}
+
+
+#functionalities .container {
+    display: flex;
+    flex-direction: row-reverse; /* Reversa el orden de los elementos */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#functionalities .texto {
+    flex-basis: 45%;
+    text-align: justify;
+}
+
+#functionalities .texto h2 {
+    font-size: 2.5em;
+    color: #000; /* Color del título */
+    margin-bottom: 20px;
+}
+
+#functionalities .texto p {
+    color: #333; /* Color del texto */
+}
+
+#functionalities .img-container {
+    flex-basis: 45%;
+    height: 300px; /* Ajusta la altura según necesites */
+    background-image: url('https://st4.depositphotos.com/4218696/26911/i/450/depositphotos_269119994-stock-photo-male-hand-using-digital-tablet.jpg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Borde redondeado para la imagen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+footer {
+    background-color: rgb(10, 50, 3); /* Cambia el color de fondo a un verde más claro */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* Cambia el color del texto a blanco para mayor contraste */
+}
+
+/* Estilos para los íconos */
+ion-icon {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Estilos para los párrafos */
+footer p {
+    margin: 5px 0;
+}
+
+/* Estilo para el copyright */
+footer p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos generales para pantallas pequeñas y dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Reduzca el tamaño de fuente del encabezado principal */
+    }
+
+    h2 {
+        font-size: 2em; /* Reduzca el tamaño de fuente de los encabezados secundarios */
+    }
+
+    .button {
+        font-size: 1em; /* Reduzca el tamaño de fuente de los botones */
+    }
+
+    header {
+        padding: 10px 0; /* Reduzca el relleno del encabezado */
+    }
+
+    header .container {
+        flex-direction: column; /* Cambie la dirección de los elementos en el encabezado a columna */
+        align-items: center; /* Alinee los elementos en el centro */
+    }
+
+    header nav {
+        margin-top: 10px; /* Añada un margen superior al menú de navegación */
+    }
+
+    #principal {
+        padding: 100px 20px; /* Ajuste el relleno de la sección principal */
+    }
+
+    #ofert .container {
+        flex-direction: column; /* Cambie la dirección de los elementos en la sección de oferta a columna */
+        text-align: center; /* Alinee el texto al centro */
+    }
+
+    #ofert .img-container,
+    #characteristics .card,
+    #functionalities .container {
+        flex-basis: 100%; /* Haga que estos elementos ocupen el 100% del ancho */
+    }
+
+    #functionalities .img-container {
+        margin-top: 20px; /* Añada un margen superior a la imagen en la sección de funcionalidades */
+    }
+
+    footer {
+        padding: 20px 10px; /* Ajuste el relleno del pie de página */
+    }
+
+}
+
+/* Estilos específicos para pantallas muy pequeñas y dispositivos móviles */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Reduzca aún más el tamaño de fuente del encabezado principal */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Reduzca aún más el tamaño de fuente de los encabezados secundarios */
+    }
+
+    #ofert .container,
+    #characteristics .container,
+    #functionalities .container {
+        padding: 80px 10px; /* Ajuste el relleno de los contenedores principales en secciones específicas */
+    }
+}
+
