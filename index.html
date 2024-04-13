@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
+    <script src="funcionalidades.js" defer></script>
     <title>PhysioDesk</title>
 </head>
 
@@ -120,7 +121,43 @@
             <img class = "img1" src="sesiones.jpg" alt="">
             <img class = "img2" src="ergonomia.jpg" alt="">
         </div>
-        </section>
+    </section>
+
+    <section class="contact">
+            
+        <div class="contenido">
+            <h3 class="titulo">Contact Us</h3>
+            <p class="descripcion">Para cualquier consulta, no dudes en contactar con nosotros.Siempre<br> estamos felices de escucharte y atender tus dudas.</p>
+        </div>
+        <div class="imagenes">
+            <img class = "img1" src="Informacion.jpg" alt="">
+        </div>
+        <div class="tabla">
+            <div class="fila">
+                <div class="celda">
+                    <label for="nombre">Full Name</label>
+                    <input type="text" id="nombre" placeholder="Your name">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="celda">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="celda">
+                    <label for="mensaje">Type your Message</label>
+                    <textarea id="mensaje" placeholder="Your message"></textarea>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="celda">
+                    <button onclick="enviarMensaje()">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <footer>
