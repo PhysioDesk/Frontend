@@ -386,6 +386,84 @@ nav a {
 
 
 
+.contact{
+    background-color: white;
+    position: relative;
+
+}
+
+.contact .contenido .titulo {
+    color: #67e0a3;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact .contenido .descripcion {
+    text-align: center;
+}
+
+.contact .imagenes .img1 {
+width: 500px;
+height: auto;
+margin-left: 100px;
+margin-top: 50px;
+}
+
+.tabla {
+    position: absolute;
+    top: 50%; /* Posición vertical centrada */
+    left: 60%; /* Posición horizontal centrada */
+    transform: translate(-0%, -50%); /* Centra la tabla respecto a su contenedor */
+    border-collapse: collapse; /* Fusiona los bordes de las celdas */
+    background-color: #f9f9f9; /* Color de fondo de la tabla */
+    border: 2px solid #ddd; /* Borde de la tabla */
+    width: 600px; /* Ancho de la tabla */
+    margin-top: 50px;
+    
+}
+
+.fila {
+    display: table-row;
+}
+
+.celda {
+    display: table-cell;
+    padding: 8px;
+    border: 2px solid #ddd; /* Borde de las celdas */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espaciado interno */
+    border: 2px solid #0f0e0e; /* Borde del input */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+button {
+    padding: 8px 16px; /* Espaciado interno */
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo del botón al pasar el ratón */
+}
+
+
+
+
 
 @media (min-width: 768px) {
     .historia {
