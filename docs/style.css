@@ -314,49 +314,50 @@ nav a {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
-  .card button.info {
-    margin-left: auto; /* Empuja el botón hacia la parte derecha del contenedor */
-    margin-right: auto; /* Empuja el botón hacia la parte izquierda del contenedor */
-    display: block; /* Hace que el botón ocupe todo el ancho disponible */
+
+.informacionPhysio {
+    background-color: #ffffff;
+    display: flex;
+    padding: 15px 25px; /* Relleno (arriba y abajo 200px, izquierda y derecha 12px) */
+    justify-content: space-evenly; /* Distribuye el espacio entre elementos de manera uniforme */
 }
 
-  .card h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-  }
-  
-  .card:nth-child(1) h3 {
-    background-image: url('https://fintech.aarpfoundation.org/wp-content/uploads/2019/12/iStock-1011417332.jpg');
-    background-size: 120%; /* Hace que el fondo sea un poco más grande */
-    background-position: center; /* Centra la imagen */
-    color: #111; /* Cambia el color del texto del título a un tono de gris oscuro */
-    text-align: center; /* Centra el texto */
-    padding: 20px 0; /* Ajusta el espaciado para centrar verticalmente */
+.informacionPhysio .contenido .img-somos {
+    background-image: url("who\ are\ we.jpg");
+    border-radius: 10px; /* Borde redondeado para la imagen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    background-position: right; /* Posición de la imagen en el contenedor */
+    height: 500px; /* Altura fija del contenedor */
+    width: 1010px;
+    float: right;
 }
 
-.card:nth-child(2) h3 {
-    background-image: url('https://media.licdn.com/dms/image/D4D12AQGdzlEKCtl97w/article-cover_image-shrink_600_2000/0/1690723531611?e=2147483647&v=beta&t=6OUKkC3o_gwOMNoitzN_uOWU8JLPnabx3zK0yLoNyKg');
-    background-size: 120%;
-    background-position: center;
-    color: #111; /* Cambia el color del texto del título a un tono de gris oscuro */
-    text-align: center;
-    padding: 20px 0;
+.informacionPhysio .contenido .img-historia {
+    background-image: url("our\ history.jpg");
+    border-radius: 10px; /* Borde redondeado para la imagen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    background-position: center; /* Posición de la imagen en el contenedor */
+    height: 500px; /* Altura fija del contenedor */
+    width: 1000px;
+    margin-top: 1px;
 }
 
-.card:nth-child(3) h3 {
-    background-image: url('https://www.hikvision.com/content/hikvision/es/newsroom/blog/presentaciones-digitales-eficiencia-y-colaboracion-en-la-empresa/_jcr_content/root/responsivegrid/image.coreimg.100.1280.jpeg/1629124305627/digital-presentation---banner-image.jpeg');
-    background-size: 120%;
-    background-position: center;
-    color: #111; /* Cambia el color del texto del título a un tono de gris oscuro */
-    text-align: center;
-    padding: 20px 0;
-} 
+.informacionPhysio .contenido .texto-somos {
+    background-color: #93d68a; /* Define el color de fondo */
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: #9acba8; /* Cambia el color al hacer hover */
 }
+
+
+
+@media (min-width: 768px) {
+    .historia {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
 
 /* Estilos para la sección Funcionalidades */
 
