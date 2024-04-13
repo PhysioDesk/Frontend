@@ -271,6 +271,8 @@ nav a {
     background-size: cover;
     background-size: 100% 100%;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro semitransparente */
+
   }
   
   #characteristics .container {
@@ -477,12 +479,15 @@ button:hover {
                         "testimonial1 testimonial2"
                         "testimonial1 testimonial3"
                         "testimonial4 testimonial4";
+                        
 
 }
 
 .testimonios .contenido {
     text-align: center;
     grid-area: titulo;
+    background-color: #e9eee9;
+
 }
 
 .testimonios .testimonial1{
@@ -491,11 +496,13 @@ button:hover {
     text-align: center;  
     display: flex;
     align-items: center;
+
 }
 .testimonios .testimonial1 .p{
     text-align: center; 
     grid-area: testimonial1;
     font-size: 1.5em;   
+
     
 }
 .testimonios .testimonial2{
@@ -531,6 +538,7 @@ button:hover {
     height: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    background-color: #baf0bc;
 }
 
 
@@ -539,7 +547,7 @@ button:hover {
 .testimonios .testimonial3:hover,
 .testimonios .testimonial4:hover {
     transform: translateY(-5px);
-    background-color: #a6f6c3; /* Cambio de color al hacer hover */
+    background-color: #737e77; /* Cambio de color al hacer hover */
 }
 
 .testimonios .testimonial p {
@@ -547,8 +555,35 @@ button:hover {
 }
 
 
+.unete .contenido .titulo {
+    text-align: center;
+}
 
+.unete .contenido .descripcion {
+    text-align: center;
+}
 
+#tablita {
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 40px;
+}
+
+.unete {
+    position: relative;
+}
+
+#tabla {
+    position: relative;
+    top: 50px; /* Posición vertical centrada */
+    left: 30%; /* Posición horizontal centrada */
+    transform: translate(-0%, -50%); /* Centra la tabla respecto a su contenedor */
+    border-collapse: collapse; /* Fusiona los bordes de las celdas */
+    background-color: #f9f9f9; /* Color de fondo de la tabla */
+    border: 2px solid #ddd; /* Borde de la tabla */
+    width: 600px; /* Ancho de la tabla */
+    margin-top: 100px;
+}
 
 @media (min-width: 768px) {
     .historia {
