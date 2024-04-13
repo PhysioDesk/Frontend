@@ -261,7 +261,7 @@ nav a {
     padding: 80px 0;
     background-color: #eaeaea; /* Fondo gris claro */
     color: #000; /* Color del texto para contraste */
-
+    background-image: url('fondo-caracteristicas.jpg') ;
   }
   
   #characteristics .container {
